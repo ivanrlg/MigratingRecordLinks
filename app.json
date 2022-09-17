@@ -1,0 +1,28 @@
+{
+  "id": "481b4987-ff4c-4956-bda7-63e2b50bfdbd",
+  "name": "ExportXML",
+  "publisher": "IvanSingleton.dev",
+  "version": "1.0.0.0",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "https://ivansingleton.dev/",
+  "url": "https://ivansingleton.dev/",
+  "logo": "",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "20.0.0.0",
+  "idRanges": [
+    {
+      "from": 57100,
+      "to": 57149
+    }
+  ],
+ 
+  "runtime": "9.0",
+  "features": [
+    "NoImplicitWith"
+  ]
+}
