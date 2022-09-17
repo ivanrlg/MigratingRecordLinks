@@ -61,11 +61,13 @@ xmlport 57102 "Import Record Link"
                 begin
                     Integer.DeleteAll;
 
-
                     Evaluate(TableIDInteger, TableID);
+                    Evaluate(LinkIDInt, LinkID);
 
-                    Window.Update(1, 'Link Id: ' + format(LinkIDInt));
+                    Window.Update(1, 'Link Id: ' + format(LinkID));
 
+                    //To Carry out the correct import of the RecordID for it, 
+                    //with a RecordRef and the previously stored information of TableID and RecordPos.
                     RecRef.Open(TableIDInteger);
                     RecRef.SetPosition(RecordPos);
                     if not RecRef.Find then begin
@@ -91,6 +93,8 @@ xmlport 57102 "Import Record Link"
                     Evaluate(NotifyBol, Notify);
                     RecordLink.Notify := NotifyBol;
 
+                    //User records that come from Business Central On-Premises, bring the Windows domain, for example, WORKGROUP\IVAN.LABRADOR, 
+                    //and in Business Central on Cloud, this information is stored without this domain.
                     RecordLink."User ID" := DelStr(UserID, 1, Text.StrPos(UserID, '\'));
                     RecordLink."To User ID" := DelStr(TouserID, 1, Text.StrPos(TouserID, '\'));
 
